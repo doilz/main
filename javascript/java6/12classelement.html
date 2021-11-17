@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>finding html elements by class name.</p>
+
+    <p class="intro">hello world.</p>
+    <p class="intro">This example demonstrates the <b>getElementByClassName</b>method.</p>
+    <p id="result"></p>
+
+
+    <script>
+
+        // const x = document.querySelectorAll("p.intro");         쿼리셀렉터
+
+        const x = document.getElementsByClassName("intro");
+        document.getElementById("result").innerHTML = 
+        'The first paragraph (index 0) with class="intro" is : ' + x[0].innerHTML;
+    </script>
+
+
+
+<!-- class 지정된 같은 타입은 0,1,2와 같은 배열번호가 순서대로 부여된다.  -->
+
+</body>
+</html>

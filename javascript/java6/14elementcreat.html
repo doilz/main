@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>element creatioin.</title>
+</head>
+<body>
+    <div id="result">above here.</div>
+    <script>
+        document.body.onload = addElement;
+        function addElement() {
+            var newdDiv = document.createElement("div");
+            var newContent = document.createTextNode("Welcome to hell.");
+            newDiv.appendChild(newContent);
+
+            var currentDiv = document.getElementById("result");
+            document.body.insertBefore(newDiv, currentDiv);
+        }
+    </script>
+</body>
+</html>

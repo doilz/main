@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- property 처럼 사용된다. -->
+    <div id="result"></div>
+    <div id="result1"></div>
+    <script>
+        class Car {
+            constructor(brand) {
+                this.carname = brand;
+            }
+
+            get cname() {
+                return this.carname;
+            }
+
+            set cname(x) {
+                this.carname = x;
+            }
+        }
+
+
+
+        let myCar = new Car("Ford");
+        document.getElementById("result").innerHTML = myCar.cname;
+
+        myCar.cname = "Benz";
+        document.getElementById("result1").innerHTML = myCar.cname;  //보이는건 메서드, 사용은 프로퍼티이다.
+    </script>
+    
+</body>
+</html>

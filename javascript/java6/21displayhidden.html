@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myDiv {
+            width: 500px;
+            height: 500px;
+            background-color: blue;
+            color: white;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <button onclick="myFunction()">hidden</button><br>
+    <button onclick="funcShow()">show</button>
+    <div id="myDiv">This is my Div element.</div>
+    <h1>this is just testing texts to see if it remain its position.</h1>
+
+    <script>
+
+
+        function myFunction() {
+            document.getElementById("myDiv").style.display = "none";
+        }
+
+        function funcShow() {
+            document.getElementById("myDiv").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>

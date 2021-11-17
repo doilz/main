@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Button</button>
+    <p id="result"></p>
+
+
+    <script>
+        var hello;
+
+        hello = function() {
+            document.getElementById("result").innerHTML += this;      // 버튼.
+        }
+
+
+        window.addEventListener("load", hello);
+        document.getElementById("btn").addEventListener("click", hello);
+
+        // 버튼에서 클릭시 이벤트실행, 헬로 
+        // 
+    </script>
+</body>
+</html>

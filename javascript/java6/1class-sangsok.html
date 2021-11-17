@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sangsok</title>
+</head>
+<body>
+    <div id="result"></div>
+    <h1>sangsok</h1>
+
+    <script>
+        class Car {
+            constructor(brand) {
+                this.carname = brand;
+
+            }
+            present() {
+                return 'I have a ' + this.carname;
+            }
+        } // end of car
+
+
+        //extends car로부터 상속할거야
+        class Model extends Car {
+            constructor(brand, model) {
+                super(brand);      //super = 컨스트럭터 부모에서 갖고 온다. 상속.
+                this.model = model;
+            }
+
+            show() {
+                return this.present() + ', it is a ' + this.model;    //부모로 부터 상속받은 함수
+            }
+        }
+
+        let myCar = new Model("Ford", "Mustang");
+
+        document.getElementById("result").innerHTML = myCar.show();
+
+        // class vehicle {
+        //     constructor(name){
+        //         this.name = name;
+        //     }
+        // }
+
+
+        // class car extends vehicle {
+        //     constructor(name, usage) {
+        //         super(name);
+        //         this.usage = usage;
+        //     }
+        // }
+
+        // class autobike extends vehicle {
+        //     constructor(name, usage) {
+        //         super(name);
+        //         this.usage = usage;
+        //     }
+        // }
+
+        // super는 부모의 속성을 물려받아 쓰겠다.
+    </script>
+</body>
+</html>

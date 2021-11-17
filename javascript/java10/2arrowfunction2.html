@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="result"></p>
+
+    <script>
+        var hello;
+
+        // hello = () => {
+        //     return "Hello World!!"        // arrow 펑션 요로케 쓴다.
+        // }
+        
+        // hello = () => "Hello world.";
+
+        // hello = (val) => "hello " + val;
+
+        // hello = val => "Hello " + val;
+
+        hello = (val) => { return "Hello " + val; }       // 모호하게 코딩해선 안된다.
+
+
+
+        // document.getElementById("result").innerHTML = hello();
+        document.getElementById("result").innerHTML = hello("world");
+
+    </script>
+</body>
+</html>
