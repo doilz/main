@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>The baseball.</h1>
+        <input type="number" id="number1" placeholder="Input number from 1 to 9." style="width: 200px;" min="1" max="9">
+        <input type="number" id="number2" placeholder="Do not input same numbers" style="width: 200px;" min="1" max="9">
+        <input type="number" id="number3" placeholder="Do not input text." style="width: 200px;" min="1" max="9">
+        <button id="play">Play.</button><br>
+        <div id="resutl"> <br> "testing"
+        </div>
+    </div>
+
+
+    <script>
+
+
+
+        // 넘버 대기조
+
+        const pickNumber = [];
+        const inputNumber = [];
+
+
+        function pickNumber() {
+            do {      
+                let numb = Math.floor(Math.random()*9);
+                numb.push;
+            } while(!compareNumber(pickNumber));
+        }
+       
+
+
+        // 넘버 피킹
+
+        function compareNumber() {
+           hasZero() || pickNumber[0] == pickNumber[1] || pickNumber[1] == pickNumber[2] || pickNumber[2] == pickNumber[0];
+            msg = "Do not input same Number!";
+        }
+
+
+        function hasZero() {
+            pickNumber[0] === 0 || pickNumber[1] === 0 || pickNumber[2] === 0;
+            msg = "Do not input Zero."
+        }
+        
+        
+        // 인풋 넘버
+        function inputNumber() {
+           do {
+                let numbs;
+                numbs.push = document.getElementById("number1", "number2", "number3").innerHTML;
+           } while(!compareNumber(inputNumber));
+        }
+
+
+        // 넘버 결과
+        const strike = 0;
+        const ball = 0;
+
+
+        function result() {
+            if(inputNumber === pickNumber) {
+                msg = homerun;
+            }
+            else if(inputNumber[0]===pickNumber[0]) {
+                msg = strike;
+            }
+            else if(inputNumber[1]===pickNumber[1]) {
+                msg = strike;
+            }
+            else if(inputNumber[2]===pickNumber[2]) {
+                msg = strike;
+            }
+
+
+            // ball
+            else if(inputNumber[0]===pickNumber[1]) {
+                msg = ball;
+            }
+            else if(inputNumber[0]===pickNumber[2]) {
+                msg = ball;
+            }
+            else if(inputNumber[1]===pickNumber[2]) {
+                msg = ball;
+            }
+
+        }
+
+
+
+        // 인풋 검사
+        // 0, 중복, 자릿수
+
+    </script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

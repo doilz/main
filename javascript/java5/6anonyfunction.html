@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call back function.</title>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+        // Callback function ui, 이벤트에서 많이 사용된다.
+
+        var func = function (a, b) {
+            return a * b;
+        }
+
+        function calc1(func) {   
+            console.log(func(4,5));
+        } // 함수의 선언, 함수를 인자로 선언, 함수 선언 안의 필드에서 인자 정의
+
+        calc1(func);
+
+        document.getElementById("result").innerHTML = func(4, 5);
+    </script>
+</body>
+</html>

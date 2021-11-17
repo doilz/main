@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result"></div>
+    <div id="result2"></div>
+    <script>
+        // class es6부터 지원, 객체지향에 가까운 객체사용 가능
+
+        // 인간 ->전사 성기사 등에 인헤리턴스 속성을 만드는 것을 
+
+        // class 클래스명 {
+        //생성자    constructor(인자) {
+        //get 클래스의 어떤 데이터형 자료를 가져오는것
+        //set 클래스의 어떤 자료를 써넣는것
+
+        //클래스 키워드로 선언
+        //클래스는 대문자로 시작
+            // 내부구조는 숨겨두고 get, set으로 접근
+            //객체지향 프로그래밍의 특징, 캡슐화 캡슐레이션
+            //
+        class Car {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+            age() {
+                let date = new Date();
+                return date.getFullYear() - this.year;  //method
+            }
+        }
+
+        let myCar = new Car("Benz", 2018);
+        document.getElementById("result").innerHTML = myCar.age() + "years old.";
+        document.getElementById("result2").innerHTML = myCar.name;
+    </script>
+</body>
+</html>

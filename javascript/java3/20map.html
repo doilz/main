@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+<body>
+    <h1>forEach</h1>
+    <div id="result"></div>
+    <script>
+        // foreach 밸류, 키, 맵오브젝트
+
+        const map = new Map();
+        map.set("20190202", "홍길동");
+        map.set("20221011", "김종팔");
+        map.set("20110305", "이덕홍");
+
+        console.log(map.get("20190202"));
+        map.delete("20110305");
+        console.log(map.has("20110305"));
+
+        map.forEach((value, key) =>
+        console.loge(key+" , " + value));
+        
+        for(let item of map) {
+            console.log(item[0]+" , " +item[1]);
+        }
+
+        for(let [key, value] of map) {
+            console.log(key+ " , "+value);
+        }
+
+        const
+        
+
+    </script>
+    
+</body>
+</html>

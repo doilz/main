@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+        
+
+
+        const letters = new Set(["a", "b", "c"]);
+
+
+        let text = "";
+
+
+        for(const x of letters.values()) {
+            text += x + "<br>";
+        }
+
+
+        // object, set , iterator ??
+        // document.getElementById("result").innerHTML = letters.values();
+        
+        document.getElementById("result").innerHTML = text;
+
+        // 아규먼트 a, b 펑션으로 함수 선언 하고 아규먼트 인자를 갖을수 있다.
+        // 선언하지 않은 변수는 로컬이라 밖에서 못씀.
+    </script>
+</body>
+</html>

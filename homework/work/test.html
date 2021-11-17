@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>star Pattern test.</title>
+</head>
+<body>
+    
+    <script>
+
+
+        // var stars = "";
+
+        // function starPattern() {
+        //     for(var i=0;i<11;i++) {
+        //        let a = "*";
+        //        stars += a;
+        //     }   
+        //     console.log(stars);
+        // }
+
+
+         
+            // for(var i=0;i<11;i++) {
+            //     console.log("*");
+            // }
+        
+
+
+        // var star = "";
+
+    
+        //     for(var i=0;i<10;i++) {
+        //         star += "*";
+        //         console.log(star);
+        //     }
+
+
+            
+           
+        // var star = "";
+        //     for(var i=11;i>0;i--) {
+        //         for(var j=0;j<i;j++) {
+        //             star += "*";                
+        //         }
+        //         star += '\n';
+        //     }console.log(star);
+       
+
+    //     var star = '';
+    //    for (var i = 0; i < 10; i++) {
+    //    for (var j = 0; j <= i; j++) {
+    //     star += '*';
+    //    }
+    //       star += '\n';
+    //     }
+    //     console.log(star);
+
+
+
+
+    // var length = 11;
+    // var i = 0;
+    // var indexNumber = Math.floor(length/2 + 1);
+    // var midrange = i * 2 + 1;
+  
+    
+    // var star = "";
+
+    //     for(var i=0;i<length;i++) {
+    //         for(var j=length;j>indexNumber;j--) {
+    //             star += " ";
+    //         } 
+    //         if(var k=5;k<=indexNumber;k--) {
+    //             star += "*";
+    //         }
+    //         else {
+    //             star += '\n';
+    //         }
+    //         console.log(star);
+    //         }
+
+
+
+    //순차적으로 증가하는 수
+    //미드레인지
+    //순차적으로 감소하는 수
+    //미드레인지가 확장됨
+    // 확장된 미드레인지에 따라 증가하고 감소함
+    // 4,3,2,1,0
+    // 0,2,3,4,5
+    // 인덱스 값에 미드레인지 -1을 해준 값을 더해주면 중앙 기준값을 만들 수 있음
+    // 이거에 따라서 좌우를 기준으로
+
+
+    
+
+    // var length = 11;
+    // var i = 0;
+    // var indexNumber = Math.floor(length/2 + 1);
+    // var midrange = i * 2 + 1;
+    // var modifiedMidIndex = indexNumber + midrange 
+    // console.log(modifiedMidIndex);
+    
+    // var star = "";
+
+    //     for(var i=0;i<modifiedMidIndex;i++) {
+    //         star += " ";
+    //         if(i==modifiedMidIndex-midrange) {
+    //             star += "*";
+        
+    //         }
+    //         star += '\n';
+    //     }
+
+    
+
+    var length = 11;
+    var i = 0;
+    var indexNumber = Math.floor(length/2 + 1);
+    var midrange = i * 2 + 1;
+    
+    
+    var star = "";
+
+        for(var i=0;i<=indexNumber;i++) {
+            for(var j=5;j>=indexNumber;j--)
+            {
+                star += " ";
+                
+                if(i==indexNumber) {
+                star += "*";
+            }
+
+            }
+            
+        }
+
+        
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For of loop.</title>
+</head>
+<body>
+    <h1>For of loop.</h1>
+    <div id="result"></div>
+    <script>
+        let array = new Set([1, 1, 2, 2, 3, 3]); //data set 배열
+        // 중복된 숫자를 제거하고 가져오고자 할때 
+        // new Set으로 해서 for value of 로 제거가 된다.
+
+        var txt = "";
+        for(var value of array) {
+            txt += value + " ";
+        }
+        document.getElementById("result").innerHTML = txt;
+    </script>
+</body>
+</html>

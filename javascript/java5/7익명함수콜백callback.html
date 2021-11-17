@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result"></div>
+    <div id="result1"></div>
+    <script>
+        // function myDisplayer(some) {
+        //     document.getElementById("result1").innerHTML = some; // myDisplayer라는 함수, 썸이라는 인자를 정의해줌, 썸은 html result1에 출력하라는 명령어
+        // }
+
+        // function myCalculaotr(num1, num2, myCallback) {
+        //     let sum = num1 + num2;
+        //     myCallback(sum);
+        // }
+
+        // myCalculaotr(5, 10, myDisplayer);
+
+
+
+        // 일반 함수 호출
+
+        // function myDisplayer(some) {
+        //     document.getElementById("result").innerHTML = some;
+        // }
+
+        // function myCalculaotr(num1, num2) {
+        //     let sum = num1 + num2;
+        //     myDisplayer(sum);
+        // }
+
+        // myCalculaotr(5, 10);
+
+        
+
+
+
+        // 익명 함수
+
+
+        callback = function (some) {
+            document.getElementById("result").innerHTML = some;          
+        }                                                                       // 디스플레이어
+
+
+        function myCalculaotr(num1, num2, callback) {
+            let sum = num1 + num2;
+            callback(sum);                                                      // 계산기능, 콜백에 결과값 리턴해줌
+        }
+
+        myCalculaotr(5, 10, callback);                                          // 변수 넣었을때 콜백실행
+
+        
+    </script>
+</body>
+</html>

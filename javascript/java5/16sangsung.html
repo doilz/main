@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+        // constructor
+        function Person(first, last, age, eyecolor) {                            // 클래스 생성
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.eyeColor = eyecolor;
+            this.fullname = function() {                                         
+                return this.firstName + " " + this.lastName
+            };
+        } 
+
+        const mySon = new Person("John", "Doe", "12", "gray");                   // 객체 생성
+        mySon.nationality = "Korean";
+        document.getElementById("result").innerHTML = 
+        "My Son is " + mySon.fullname() + "." + "<br>";                          //메서드 호출시 () 반드시 추가.
+
+        // document.getElementById("result").innerHTML = "My Son is " + mySon.firstName + "." + "<br>";
+        // document.getElementById("result").innerHTML = "My Son is " + mySon.lastName + "." + "<br>";
+        // document.getElementById("result").innerHTML = "My Son is " + mySon.age + "." + "<br>";
+        // document.getElementById("result").innerHTML = "My Son is " + mySon.eyeColor + ".";
+        
+    </script>
+</body>
+</html>

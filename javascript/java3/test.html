@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function test.</title>
+</head>
+<body>
+    <h1>function test.</h1>
+    <div id="result"></div>
+    <button onclick="myNumber()">hit</button>
+
+    <script>
+        let ball = [];
+
+        function myNumber() 
+            {
+            for(var i=0;i<3;i++) 
+            {
+            ball.push(Math.floor(Math.random() * 9));
+
+            if(ball[0]!==ball[1])
+            {
+
+            }
+
+            // 0, 검출 및 제거기 //
+            // 복수 숫자 검출기 //
+
+
+        document.getElementById("result").innerHTML = ball;
+            }
+        }
+    </script>
+</body>
+</html>

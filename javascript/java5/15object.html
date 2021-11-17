@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+        // object 와 class
+        // 우리눈에 보이는 구체적 대상을 오브젝트
+        //속성과 행위로 정의된다.
+        // 객체를 정의하는 틀을 클래스라고 한다. ??
+        // 클래스는 메모리에 올리면 오브젝트가 된다. ??
+        // 클래스는 멤버 변수와 메서드, 함수)로 정의된다.  ??
+        // 클래스로부터 객체를 생성해서 사용하는 개념이다.??
+        //es6 이전에는 object 타입을 주로 사용하여객체를 정의했다.
+        //premitive 와 달리 배열도 object이다.
+        //객체는 속성의 모음이며 key:value의 구조를 갖는다.
+        //속성이 함수인 경우
+
+        //객체 리터럴을 이용한 객체 생성 json
+        //java object notation 자바스에서 사용하는 객체표기법
+        //key : value
+
+        // id : dotteda
+        // name : 지도일
+
+        //객체의 값으로 함수를 사용할 수 있기 때문에 클래스와 유사한 형태가 된다 ??
+
+
+        const car = {
+            type: "Flat",   //키가 메소드 형식으로 사용된다.
+            model:"500",
+            color:"red",
+        };
+
+        // object
+
+        document.getElementById("result").innerHTML = "The car type is" + car.type; // 
+
+
+        const person = {
+            firstname:"David",
+            lastname:"Doe",
+            age:20,
+            eyeColor:"gray",
+            fullname: function() {
+                return this.firstname + " " + this.lastname; // this 오브젝트 자신을 가리킬때 this
+            }
+        };
+
+        document.getElementById("result").innerHTML = person.fullname();
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

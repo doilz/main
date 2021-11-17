@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<div id="testbox">
+    <input type="text" id="numbers" placeholder="input 3 digit numbers.">
+    <button onclick="numberGenerator();">Click.</button>
+
+</div>
+
+<body>
+    <script>
+
+
+
+const array = [0, 1, 2];
+
+
+function inputString(val) {
+    document.getElementById("numbers").innerHTML = val;
+}
+
+// 번호를 생성하는 기능
+
+
+function numberGenerator() {
+    do {
+    let randomNumber = 
+    Math.floor(Math.random()*100000) % 1000;
+   
+    array[2] = randomNumber % 10;
+    array[0] = Math.floor(randomNumber / 100);
+    array[1] = Math.floor((randomNumber % 100)/ 10);
+    } while(!hasDupNumberAndZero(numberGenerator));
+}
+
+
+// 0, 중복이 아닐때만
+// 어레이에 집어넣기
+
+const isRightNumber(inputString) {
+    if(Number.isNaN(inputString)) {
+        msg = "input number only."
+    } else if(inputString.length !== 3) {
+        msg = "Only 3 digit Number."
+    } else if(hasDupNumber(inputString)) {
+        msg = "Do not input same number."
+    } else if(hasZero(inputString)) {
+        msg = "Do not input Zero."
+    } 
+
+    if (msg) {
+        console.log(msg);
+        return false
+    }
+
+    return true;
+}
+
+
+//인풋숫자검사, 0, 숫자아닌 타입, 중복, 자릿수
+
+const hasDupNumberAndZero(val) {
+    hasZero(val) ||  val[0] == val[1] || val[1] == val[2] || val[2] == val[0];
+}
+
+const hasZero(val) {
+    val[0] == 0 || val[1] == 0 || val[2] == 0;
+}
+
+
+
+//인풋받기
+
+const askQuestion() {
+    document.getElementById("question").innerHTML = "세자리 숫자를 입력하시오.";
+}
+
+
+
+
+// 인풋숫자와 어레이 숫자 비교
+// 볼 스트라이크 홈런 검사
+// 결과 , 리셋
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

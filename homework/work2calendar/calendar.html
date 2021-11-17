@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar.</title>
+</head>
+<body>
+    <h1>Calendar work.</h1>
+    <script>
+       
+        let year = new Date().getFullYear();
+        let month = new Date().getMonth();
+        console.log(year, month); + "<br>";
+        console.log("일  월  화  수  목  금  토") + "<br>";
+        let dateArray = [];
+        let date;
+
+
+        function makeCalendar(year, month)
+        {
+            if(month%2 !== 0) {
+                let date = 31;
+                for(i=1; i<31; i++)
+                {
+                 
+                    console.log(dateArray.push(i));
+                    if(i%7===0) 
+                    {
+                        console.log("<br>");
+                    }
+                }
+            }
+
+            else if(month === 2) 
+                {
+                let date = 28;
+                for(i=1; i<28; i++)
+                {
+                 
+                    console.log(dateArray.push(i));
+                    if(i%7===0) 
+                    {
+                        console.log("<br>");
+                    }
+                }
+                }
+            else if(month%2 === 0 && month !== 2) 
+                {
+                let date = 30;
+                for(i=1; i<30; i++)
+                {
+                   
+                    console.log(dateArray.push(i));
+                    if(i % 7 ===0) 
+                    {
+                        console.log("<br>");
+                    }
+                }
+            }
+
+        }
+
+        makeCalendar(2021, 5);
+    </script>
+
+
+
+</body>
+</html>

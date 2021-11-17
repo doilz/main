@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+        function myDisplayer(some) {
+            document.getElementById("result").innerHTML = some;
+        }
+
+        // 마이디스플레이어 함수 섬 인자
+        //섬 인자는 리절트에 섬 인자를 표시
+        //즉 마이디스플레이어를 입력할 경우 마이디스플레이어의 인자인 섬을 표시하라는 뜻
+
+    // 마이디스플레이어의 섬은 인자이지만 자바스크립트는 인자를 다시 함수화할 수 있다.
+
+        function getFile(myCallback) {  // 펑션: 함수선언, 겟파일 함수이름, 마이콜백: 함수 인자
+            let req = new XMLHttpRequest(); // req라는 변수는 xmlhttprequest이다
+            req.open('GET', '10mycar.html'); // req.open 오픈 메소드, get 갖고와, 10mycar.html // 10mycarhtml를 갖고와
+            req.onload = function() { // 익명함수
+                if(req.status == 200) { //
+                    myCallback(this.responseText);
+                } else {
+                    myCallback("Error : " + req.status);
+                }
+            }
+            req.send();
+        }
+
+        getFile(myDisplayer);
+    </script>
+</body>
+</html>

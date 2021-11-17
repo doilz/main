@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array push.</title>
+</head>
+<body>
+    <h1>Push</h1>
+    <div id="res1"></div>
+    <div id="res2"></div>
+    <button onclick="myFunction()">Try Click.</button>
+
+    <script>
+           const fruits = ["Banana", "Orange", "Apple", "Grape"];
+           document.getElementById("res1").innerHTML = fruits;
+
+           function myFunction()
+           {
+                document.getElementById("res1").innerHTML = fruits.push("Mango");
+                document.getElementById("res1").innerHTML = fruits;
+                
+           }
+    </script>
+    
+</body>
+</html>
