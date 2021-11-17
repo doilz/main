@@ -1,0 +1,93 @@
+.center {
+    margin: auto;
+    width: 80%;
+    border: 5px solid green;
+    padding: 10px;
+    text-align: center;
+}
+
+/* padding */
+
+
+.center2 {
+    padding: 70px;
+    border: 5px solid green;
+}
+
+
+/* 이미지 가운데정렬 */
+
+
+
+div {
+    text-align: center;
+    background-color: lemonchiffon;
+    color: limegreen;
+    padding: 25px;
+}
+
+
+/* img2 */
+
+img {
+    display: block;
+    margin: auto;
+}
+
+
+/* combination 셀렉터 div 박스 안의가 자손이 되어 속성을 상속한다. */
+
+/* 
+div p {
+    background-color: yellow;
+
+} */
+
+/* 직계자손 */ 
+
+div > p {
+    background-color: blue;
+}
+
+/* 인접한자가 형제요소를 갖는다. */
+
+div + p {
+    background-color: yellow;
+}
+
+/* 이후의 모든 애들이 형제요소를 갖는다. */
+
+div ~ p {
+    background-color: yellow;
+} 
+
+/* 가상 셀렉터  : 가상 클래스와 가상 엘리먼트가 있다. */
+
+div:hover {
+    background-color: purple;
+}
+
+
+input:focus {
+    background-color: burlywood;
+}
+
+
+input:checked {
+    width: 50px;
+    height: 50px;
+}
+
+input[type=text]:enabled {
+    background-color: blueviolet;
+    color: white;
+}
+
+input[type=text]:disabled {
+    background-color: red;
+    columns: black;
+}
+
+p i:first-child {
+    color: blue;
+}

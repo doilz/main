@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="myFunction()">Click Me!</button>
+    <div id="result"></div>
+
+        <script>
+            function myFunction() 
+            {
+                    var text = "";                  // 빈문자열로 초기화
+                    var i = 0;                      // 빈숫자로 초기화
+                    var sum = 0;
+
+                    // while(i < 5)
+                    // {
+                    //     text += "<br>The number is " + i;           // text로 출력!
+                    //     i++;
+                    //     if(i === 3) 
+                    //     {
+                    //         break;
+                    //     }
+                    // }
+
+                    
+                    while(i<100)
+                    {
+                        sum += i + 1;
+                        i++;
+                    }
+                    text = "Sum is " + sum;
+                  
+                    document.getElementById("result").innerHTML = text;
+            }
+
+        </script>
+</body>
+</html>

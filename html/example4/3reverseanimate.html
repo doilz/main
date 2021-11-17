@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            position: relative;
+            /* animation: mymove 5s infinite; */
+            animation: mymove 1s 3;
+        }
+
+        @keyframes mymove {
+            from {left: 0px;}
+            to {left: 200px;}
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="myFunction()">Click me.</button>
+
+    <script>
+        function myFunction() {
+            // document.getElementById("myDiv").style.animationDirection = "reverse";    방향 바꾸기
+            // document.getElementById("myDiv").style.animationDuration = "1s";   // 애니메이션 시간 바꾸기
+               document.getElementById("myDiv").style.animationIterationCount = "Infinite";
+        }
+    </script>
+
+
+    <div id="myDiv"></div>
+
+    <!-- 자바스크립트는 마지막에 두는것을 추천한다. -->
+    
+</body>
+</html>

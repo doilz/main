@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float options.</title>
+    <link rel="stylesheet" href="./common.css" type="text/css">
+</head>
+<body>
+    <!-- <h2>This is float options.</h2>
+    <p>image will float to the right in the paragraph.</p>
+    <p>
+        <img class="rfloat" src="./imngs/img.gif" alt="">
+        <img class="lfloat" src="./imngs/img.gif" alt="">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. -->
+<!-- 
+    </p>
+
+
+    <h2>without clear</h2>
+    <div class="div1">this is div1</div>
+    <div class="div2">this is div2 is in the html code. since div 1 floats to the left</div><br><br>
+    <h2>with clear</h2>
+    <div class="div3">this is div3</div>
+    <div class="div4">this is div4 is under div
+    </div> -->
+
+    <h2>whithout clearfix</h2>
+    <p>
+        This image is floated to the right. It is also taller than the element containing it, so it overflows outside of its container:
+    </p>
+
+    <div>
+        <img class="img1" src="./imngs/applebig.jpeg" alt="" width="170" height="170">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...
+    </div><br><br>
+    <h2 class="clearfix">with clearfix</h2>
+    <p>We can fix this by adding a clearfix class with a overflow option: auto; to the contaning element.</p>
+    <div class="clearfix">
+        <img class="img2" src="./imngs/applebig.jpeg" alt="">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...
+
+    </div>
+</body>
+</html>

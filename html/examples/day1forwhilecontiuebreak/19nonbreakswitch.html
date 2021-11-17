@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="checkSwitch()">submit</button>
+    <p id="result"></p>
+
+    <script>
+        function checkSwitch() {
+            let text;
+
+            switch(new Date().getDay()) {
+                case 1:
+                case 2:
+                    // text = "Today is tuesday";
+                case 3:
+                    // text - "Today is wendsday!!"
+                    // break;
+                case 4:
+                case 5:
+                    text = "Soon will be weekend!";
+                    break;
+                case 0:
+                case 6:
+                    text = "Its weeekends!";
+                    default:
+                        text = " Looking forward to weekend"
+            }
+            document.getElementById("result").innerHTML = text;
+        }
+
+
+
+        // 케이스 12345 5에다가 텍스트넣고 브릭한것과 a == || 1~5 이게 갖고 var i=0 i<6 i++ 요게 같다는 말이죠?
+    </script>
+</body>
+</html>

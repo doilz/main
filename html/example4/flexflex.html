@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myDiv {
+            width: 220;
+            height: 300;
+            border: 2px solid black;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="setMyFlex()">Click</button>
+    <div id="myDiv">
+        <div style="background: coral;">cocxvxzcvvxzccxvxzcvvxzccxvxzcvvxzccxvxzcvvxzccxvxzcvvxzccxvxzcvvxzccxvxzcvvxzcral</div>
+        <div style="background: blue;">cadsfadsfl</div>
+        <div style="background: red;">cxvxzcvvxzccxvxzcvvxzccxvxzcvvxzccxvxzcvvxzc</div>
+        <div style="background: greenyellow;">coqdrral</div>
+        <div style="background: palegreen;">cocxvxzcvvxzcradsfl</div>
+
+    </div>
+
+    <script>
+        function setMyFlex() {
+           
+           var x = document.getElementById("myDiv");
+           var y = x.getElementsByTagName("DIV");
+           var i = 0;
+           
+           for (let i = 0; i < y.length; i++)
+           {
+               y[i].style.msFlex = "i"; //IE10 버전인 겨우
+               y[i].style.flex = "1";   //범용
+           }
+        }
+    </script>
+</body>
+</html>

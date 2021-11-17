@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mystyle {
+            width: 300px;
+            height: 50px;
+            text-align: center;
+            background-color: orangered;
+            margin-bottom: 10px;
+            float: left;
+            margin: 8px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="myFunction()">Click</button>
+    
+    <div id="myDiv" class="mystyle">
+        Im a DIV element.
+    </div>
+
+    <div class="mystyle">
+        im a DIV element.
+    </div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementsByTagName("DIV")[0];                     // 태그 대문자.
+            
+            if(x.id==="myDiv") {
+                x.style.fontSize = "30px";                                                   //메소드할때 카멜텍스트
+            }
+        }
+    </script>
+
+
+</body>
+</html>

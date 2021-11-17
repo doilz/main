@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="myFunction()">Click</button>
+    <div id="result"></div>
+    <script>
+        function myFunction() 
+        {
+            var text = "";
+            var i = 0;
+            for(i=0;i<5;i++)
+            {
+                if(i===3)
+                {
+                    continue;                                           // 컨티뉴는 바닥으로 직행 프로세스에 영향을 준다.   //브레이크는 아래 프로세스를 생략하고 위로 올라간다.
+                }
+                text += "The number is " + i + "<br>";
+            }
+            document.getElementById("result").innerHTML = text;
+        }
+    </script>
+    
+</body>
+</html>

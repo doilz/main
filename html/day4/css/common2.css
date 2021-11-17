@@ -1,0 +1,63 @@
+/* header {
+    background-color: lightgrey;
+    height: 120px;
+    align-items: center;
+}
+
+main {
+    background-color: white;
+    min-height: 400px;
+}
+
+footer {
+    background-color: darkgray;
+    height: 200px;
+} */
+
+
+/* header */
+
+.topright {
+    text-align: right; 
+}
+
+
+#search {
+    border: 2px solid rgb(35, 175, 82);
+    width: 600px;
+    height: 50px;
+}
+
+/* nav */
+
+ul li {
+    display: inline;
+}
+
+/* center ad */
+
+#adcent {
+    height: 140px;
+    width: 850px;
+
+}
+
+/* login button */
+
+#login {
+    background-color: greenyellow;
+    border: greenyellow;
+    text-align: center;
+    width: 400px;
+    height: 40px;
+}
+
+#member {
+    text-align: right;
+}
+
+/* article center */
+
+#articlecent {
+    width: 850px;
+}

@@ -1,0 +1,222 @@
+
+/* input selector */
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color:  purple;
+    color: white;
+}
+
+input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color:  lightpink;
+    color: darkblue;
+}
+
+/* id selector */
+#parag {
+    text-align: center;
+    background-color: yellow;
+    color: black;
+
+}
+
+
+/* Class selector */
+
+.aright {
+    text-align: right;
+    background-color: blue;
+    color: white;
+}
+
+
+/* class tag header 조합 */
+
+.header {
+    background-color: black;
+    color: yellow;
+    text-align: center;
+}
+
+p.header {
+    background-color: blue;
+    color: yellow;
+    text-align: center;
+}
+
+
+/* 폰트속성 */
+
+.p1 {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+.p2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.p3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.normal {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+}
+
+.italic {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 60px;
+}
+
+.oblique {
+    font-style: oblique;
+    font-weight: 900px;
+    font-size: 80px;
+}
+
+
+/* 링크 css */
+
+a:link {
+    color: red;
+}
+
+a:visited {
+    color: green;
+}
+
+a:hover {
+    color: hotpink;
+}
+
+a:active {
+    color: blue;
+}
+
+/* rgb */
+
+#rgbid {
+    background-color: rgb(255, 99, 71);
+}
+
+/* hex */
+
+#hexid {
+    background-color: #ff6347
+}
+
+#hslid {
+    background-color: hsl(9, 100%, 64%);
+}
+
+#rgbaid {
+    background-color: rgba(255, 99, 71, 0.3);
+}
+
+#hslaid {
+    background-color: hsla(9, 100%, 64%, 0.5);
+}
+
+
+/* background imgs */
+
+body {/* background-color: mediumpurple; */
+    /* background-image: url("./klay.jpeg"); */
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-attachment: fixed;
+    background-attachment: scroll;
+}
+
+p {
+    background-color: yellow;
+    /* background-image: url(./naver.png); */
+}
+
+div {
+    background-color: green;
+    width: 320px;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+}
+
+div.first {
+    opacity: 0.1;
+}
+
+
+div.second {
+    opacity: 0.5;
+}
+
+
+div.third {
+    opacity: 0.8;
+}
+
+/* 박스 스타일 */
+
+p.dotted {
+    border-style: dotted;
+}
+
+p.dashed {
+    border-style: dashed;
+}
+
+p.solid {
+    border-style: solid;
+}
+
+p.double {
+    border-style: double;
+}
+
+p.groove {
+    border-style: groove;
+}
+
+p.ridge {
+    border-style: ridge;
+}
+
+p.outset {
+    border-style: outset;
+}
+
+p.inset {
+    border-style: inset;
+}
+
+p.none {
+    border-style: none;
+}
+
+p.inherit {
+    border-style: inherit;
+}
+
+p.initial {
+    border-style: initial;
+}
+
+p.hidden {
+     border-style: hidden;
+}
+
+
+p.var {
+    border-style: var(#ff6347);
+}

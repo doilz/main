@@ -1,0 +1,165 @@
+p.round1 {
+    border: 2px solid blue;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+p.normal {
+    border: 2px solid blue;
+    padding: 5px;
+    
+}
+
+p.round2 {
+    border: 2px solid blue;
+    border-radius:  10px;
+}
+
+p.round3 {
+    border: 2px solid blue;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+
+short hand */
+/* 
+p {
+    background-color: lightpink;
+    border-left: red 10px solid;
+}
+
+/* margin div */
+
+div.margin {
+    background-color: lightgray;
+    width: 500px;
+    padding: 50px;
+    border: 15px solid green;
+    margin: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* positions. */
+
+div.static {
+    position: static;
+    border: 3px solid green;
+}
+
+
+div.relative {
+    position: relative;
+    border: 3px solid red;
+    /* left: 50px;
+    top: 50px; */
+    height: 400px;
+    width: 400px;
+}
+
+
+div.absolute {
+    position: absolute;
+    border: 3px solid blue;
+    top: 80px;
+    left: 100px;
+    right: 0;
+    width: 200px;
+    height: 100px;
+}
+
+
+div.fixed {
+    position: fixed;
+    bottom: 0;
+    width: 300px;
+    border: 5px solid pink;
+}
+
+
+/* z index */
+
+img.zindex {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    z-index: -1;
+
+}
+
+/* float */
+
+img.lfloat {
+    float: left;
+    margin-right: 30px;
+}
+
+img.rfloat {
+    float: right;
+    margin-left: 30px;
+}
+
+/* float left position and clear. */
+
+.div1 {
+    float: left;
+    padding: 10px;
+    border: 5px solid green;
+}
+
+.div2 {
+    float: left;
+    padding: 10px;
+    border: 5px solid red;
+}
+
+.div3 {
+    float: left;
+    padding: 10px;
+    border: 5px solid green;
+}
+
+.div4 {
+    padding: 10px;
+    border: 5px solid red;
+    clear: left;
+}
+
+/* img float */
+
+.img1 {
+    float: right;
+}
+
+
+.img2 {
+    float: left;
+}
+
+div {
+    border: 5px solid green;
+    padding: 10px;
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+/* list */
+
+li {
+    display: inline;
+}
+
+
+/*  */
+
+a {
+    display: block;
+}
+
+/* ext */
+
+p.ext {
+    display: inline-block;
+}
