@@ -1,0 +1,25 @@
+git init  // git에게 해당 디렉토리의 파일을 관리하겠다고 알려줌
+
+git config --global user.email "내이메일" 
+git config --global user.name "내이름"    
+
+
+-----------------------
+git add readme.txt // 파일 등록
+git commit -m '설명' // 설명 등록
+git push  // 저장소에 업로드
+git log // commit 내용을 보여줌
+---------------------
+git checkout 커밋아이디 // 해당 아이디의 커밋으로 되돌림
+---------------------------
+git clone 주소
+----------------------------
+git pull 받음
+-------------------
+
+
+
+
+
+
+
