@@ -1,0 +1,7 @@
+readdir / 디렉토리 검색 파일들을 어레이에다가 스트링으루 저장
+foreach / 어레이 요소들을 순차적으로 체크 if
+fs.stat / 해당위치의 파일이 갖고 있는 정보를 (stats)라는 변수에 저장
+opensync / 
+readsync
+write sync
+close sync
