@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "fstream": "^1.0.12",
-    "tar": "^6.1.11"
+    "tar": "^6.1.11",
+    "zip-lib": "^0.7.2"
   }
 }
