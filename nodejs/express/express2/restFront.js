@@ -4,13 +4,13 @@ async function getUser() { // 로딩 시 사용자 가져오는 함수
       const users = res.data;
       const list = document.getElementById('list');
       list.innerHTML = '';
-      // 사용자마다 반복적으로 화면 표시 및 이벤트 연결
+      // 사용자마다 반복적으로 화면 표시 및 이벤트 연결`
       Object.keys(users).map(function (key) {
         const userDiv = document.createElement('div');
         const span = document.createElement('span');
         span.textContent = users[key];
         const edit = document.createElement('button');
-        edit.textContent = '수정';
+        edit.textContent = 'Edit';
         edit.addEventListener('click', async () => { // 수정 버튼 클릭
           const name = prompt('바꿀 이름을 입력하세요');
           if (!name) {
@@ -47,8 +47,8 @@ async function getUser() { // 로딩 시 사용자 가져오는 함수
   window.onload = getUser; // 화면 로딩 시 getUser 호출
   // 폼 제출(submit) 시 실행
   document.getElementById('form').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const name = e.target.username.value;
+    e.preventDefault();     // 새로고침 해도 정보 고정.
+    const name = e.target.username.value;    // target 서브밋 옆 인풋공간
     if (!name) {
       return alert('이름을 입력하세요');
     }

@@ -3,13 +3,14 @@ const fs = require('fs').promises;
 
 const users = {}; // 데이터 저장용
 
-http.createServer(async (req, res) => {
+http.createServer(async (req, res) => {   //서버를 만들고 비동기로 요구를 처리하자
   try {
     if (req.method === 'GET') {  // req메소드가 get이고
-      if (req.url === '/') {     // req url이 / 일때
-        const data = await fs.readFile('./restFront.html');
+      if (req.url === '/') {     // req url이 / 일때    요청받을 주소
+        const data = await fs.readFile('./restFront.html');                  //
         res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
         return res.end(data);
+        
       } else if (req.url === '/about') {
         const data = await fs.readFile('./about.html');
         res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
@@ -38,6 +39,9 @@ http.createServer(async (req, res) => {
           const { name } = JSON.parse(body);
           const id = Date.now();
           users[id] = name;
+          console.log(users[id]);
+          console.log(name);
+          console.log(id);
           res.writeHead(201, { 'Content-Type': 'text/plain; charset=utf-8' });
           res.end('ok');
         });

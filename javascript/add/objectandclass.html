@@ -1,0 +1,64 @@
+<!-- 객체 속성과 행위 메소드 프로퍼티
+객체를 정의하는 것은 클래스
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Array {
+            pro;
+            method;
+        }
+
+        //클래스 안에 메소드와 프로퍼티들을 정의해서 갖다 씀
+
+        let abc = new Array();
+
+        // 인스턴스화 됐다. 눈에 보이지 않는 메모리에 할당됐다.
+        // 할당 되지 않으면 못써
+        abc.toString();
+
+        // 클래스는 멤버 변수와 메서드, 클래스로부터 객체를 생성
+        //클래스는 눈에 보이고 오브젝트는 갖다 씀 메모리에 할당(인스턴스화);
+
+
+        // 캡슐레이션 클래스필드에 접근할때 
+        get set
+
+
+        // this
+
+        this가 객체화 되었을때 인스턴스화된 자신을 가르킨다.
+
+        메모리에 인스턴스화된 
+
+        오브젝트를 메모리에 올리면 인스턴스
+
+        클래스가 메모리에 객체화된 자신을 가리키는 것. -->
+        <script>
+
+        class Product {
+            constructor(name, price) {
+                this.name = name;
+                this.price = price;
+            }
+
+            getInfo() {
+                return this.name + " . " + this.price;
+            }
+        };
+        
+        var a = new Product("doil", 1000);
+
+        console.log(a.name + a.price);
+
+    </script>
+</body>
+</html>
