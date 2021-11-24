@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="x"></p>
+
+<script>
+    var human = {
+     name1: "doil",
+     age: 38,
+     infos: function() {
+         return this.name1 + " " + this.age;
+     }
+};
+
+human.heigt = 187, ()=>{
+    return this.heigt
+};
+
+console.log(human.infos());
+console.log(human);
+console.log(human.toString());
+
+console.log(human.heigt);
+console.log(human.age);
+console.log(human.name1);
+
+document.getElementById("x").innerHTML = human.name1 + " " + human.age + " " + human.infos(); + " " + human.heigt.toString();
+
+
+    </script>
+</body>
+</html>
