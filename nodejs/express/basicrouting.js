@@ -23,7 +23,7 @@ app.get('/list_user', (req, res) => {
 
 
 app.get('/ab*cd', (req, res)=>{
-    console.log("Get reqest for /ab*cd");
+    console.log("Get request for /ab*cd");
     res.send("Display pattern matching route");
 });  //ab 와 cd 사이에 들어가는 모든 것은 다 
 

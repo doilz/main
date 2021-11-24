@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();     //크리에이트 서버 됨.
 
-app.get('/', (req, res) => {   //http 요청 라우팅 미들웨어
+app.get('/', (req, res) => {   //http 요청 라우팅 미들웨어 get 조회 post 등록
     res.end('hello world');
 });
 
