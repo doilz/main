@@ -42,3 +42,7 @@ app.get('/hi', (req, res) => {
         user : {name: "Michael", age: "20"}
     });
 });
+
+app.get('/components', (req, res) => {
+    res.render("content");
+});

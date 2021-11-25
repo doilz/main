@@ -1,0 +1,15 @@
+   h1 bodyparser test
+        form(action="/bodyparser" method="POST")  
+            input(type="text" name="id" require placeholder = "user ID");
+
+form action
+폼에서 받은 데이터가 전달될 주소
+
+form method 
+방식, get, post, put, edit
+
+required
+반드시 입력되어야함
+
+input submit
+데이터를 전송하는 핸들러, 전송할 주소는 form action에 명시된다.
