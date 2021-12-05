@@ -1,7 +1,35 @@
 nav {
-    background-color: lightgray;
-    color: black;
+    background-color: purple;
+    color: #fff;
     padding: 30px 60px;
-    flex: content;
+    display: flex;
     justify-content: space-between;
+    /* 스페이스 비트윈 컨테이너에 속한 것들 사이를 벌린다 */
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    /* children 요소들의 사이가 일정해진다. */
+    align-items: center;
+    /* align vertically centered 수직 위치가 일정함*/
+}
+
+nav li {
+    list-style-type: none;
+}
+
+nav li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 8px;
+    /* 5px bottom 8px left right */
+
+}
+
+
+nav li a:hover {
+    color: yellow;
+    text-decoration: none;
 }

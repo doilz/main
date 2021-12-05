@@ -61,6 +61,12 @@ app.get("/", (req, res) => {    //req from some kind of a form  // res for throw
     res.render('index')   //무슨 파일을 렌더링하고싶냐
 });
 
+
+app.get("/register", (req, res) => {    //req from some kind of a form  // res for throw some
+    // res.send("<h1>Home Pages</h1>")
+    res.render('register')   //무슨 파일을 렌더링하고싶냐
+});
+
 //요청 처리
 
 
