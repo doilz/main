@@ -48,25 +48,27 @@ db.connect( (err) => {
 const publicDirectory = path.join(__dirname, './public' );   // ./public을 현재의 디렉토리에 병합하여 publicDirectory에 대입한다.
 console.log(publicDirectory);
 app.use(express.static(publicDirectory));
+// parse url-encoded bodies (as send by html forms)
+app.use(express.urlencoded({ extended: false}));
+app.use(express.json());
 // app.set('view engine', 'pug');
 app.set('view engine', 'hbs');
 
 //public dir and veiw engine
 
+//define routes
+app.use('/', require('./routes/pages'));
 
+app.use('/auth', require('./routes/auth'));
 
-
-app.get("/", (req, res) => {    //req from some kind of a form  // res for throw some
-    // res.send("<h1>Home Pages</h1>")
-    res.render('index')   //무슨 파일을 렌더링하고싶냐
-});
-
-
-app.get("/register", (req, res) => {    //req from some kind of a form  // res for throw some
-    // res.send("<h1>Home Pages</h1>")
-    res.render('register')   //무슨 파일을 렌더링하고싶냐
-});
-
+// app.get("/", (req, res) => {    //req from some kind of a form  // res for throw some
+//     // res.send("<h1>Home Pages</h1>")
+//     res.render('index')   //무슨 파일을 렌더링하고싶냐
+// });
+// app.get("/register", (req, res) => {    //req from some kind of a form  // res for throw some
+//     // res.send("<h1>Home Pages</h1>")
+//     res.render('register')   //무슨 파일을 렌더링하고싶냐
+// });
 //요청 처리
 
 
