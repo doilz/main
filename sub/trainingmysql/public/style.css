@@ -1,0 +1,7 @@
+nav {
+    background-color: lightgray;
+    color: black;
+    padding: 30px 60px;
+    flex: content;
+    justify-content: space-between;
+}

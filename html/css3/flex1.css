@@ -1,0 +1,90 @@
+/* flex-direction */
+.flex-container {
+    display: flex;
+    flex-direction: row; /*row-reverse(또는 column-reverse)는 행에서 오른쪽 끝부터 왼쪽으로 정렬됨(또는 열에서 아래에서 위로). 일반은 row(또는 column*/
+    background-color: dodgerblue;
+}
+
+.flex-container > div {
+    background-color: lightgray;
+    width: 100px;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+}
+
+
+/* flex-wrap lex-wrap 속성은 정렬된 요소들의 총 넓이가 부모 넓이 보다 클 때, 이 요소들을 다음 줄에 이어서 정렬 해주는 기능. */
+.flex-container2 {
+    display: flex;
+    flex-wrap: wrap-reverse; /*기본 warp, 그 외 nowrap, wrap-reverse 등*/
+    background-color: dodgerblue;
+}
+
+.flex-container2 > div {
+    background-color: lightgray;
+    width: 100px;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+    line-height: 75px;
+    text-align: center;
+}
+
+/* flex-justify -> "수평" 방향 정렬 방식 */
+.flex-container3 {
+    display: flex;
+    justify-content: space-around; /* justify-content: center 가운데 정렬. 그 외 flex-start/end space-between/around 등 혼자 해볼 것 */
+    background-color: dodgerblue;
+}
+
+/* flex- align-items -> "수직"방향 정렬 방식 */
+.flex-container4 {
+    display: flex;
+    height: 200px; 
+    align-items: stretch; /*center, flex-start/end 등 즉, justify는 좌우(inline) align-item은 상하(block)*/
+    background-color: dodgerblue;
+}
+
+.flex-container4 > div {
+    background-color: lightgray;
+    width: 100px;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+/* flex- baseline */
+.flex-container5 {
+    display: flex;
+    height: 300px; 
+    align-items: baseline; /*center, flex-start/end 등 즉, justify는 좌우(inline) align-item은 상하(block)*/
+    background-color: dodgerblue;
+}
+
+.flex-container5 > div {
+    background-color: lightgray;
+    width: 100px;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.flex-container6 {
+    display: flex;
+    height: 300px;
+    align-content: stretch;
+    background-color: dodgerblue;
+}
+
+.flex-container6 > div {
+    background-color: lightgray;
+    width: 100px;
+    margin: 10px;
+    padding: 20px;
+    font-size: 15px;
+    text-align: center;
+    line-height: 30px; }  
