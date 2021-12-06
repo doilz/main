@@ -1,6 +1,6 @@
 const express = require("express");   //start server 모듈 호출
 
-const mysql = require("mysql"); // db 호출
+ // db 호출
 
 const path = require('path');
 
@@ -15,12 +15,12 @@ const port = 3001;
 
 
 
-const db = mysql.createConnection({
-    host: process.env.DATABASE_HOST,
-    user: process.env.DATABASE_USER,
-    password: process.env.DATABASE_PASSWORD,
-    database: process.env.DATABASE
-});
+// const db = mysql.createConnection({
+//     host: process.env.DATABASE_HOST,
+//     user: process.env.DATABASE_USER,
+//     password: process.env.DATABASE_PASSWORD,
+//     database: process.env.DATABASE
+// });
 // const db = mysql.createConnection({       
 //     host: 'localhost',
 //     user: root,
