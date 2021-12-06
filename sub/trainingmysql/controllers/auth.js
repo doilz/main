@@ -10,19 +10,6 @@ const db = mysql.createConnection({
     database: process.env.DATABASE
 });
 
-// exports.register = (req, res) => {
-//     console.log(req.body);
-//     // res.send("Form submitted");
-//     // const name = req.body.name;
-//     // const email = req.body.email;
-//     // const password = req.body.password;
-//     // const passwordConfirm = req.body.passwordConfirm;
-//     // const { userid, email, userpwd, passwordConfirm  = req.body };
-
-//     // });
-//     // users에서 email컬럼을 선택
-// }
-
 exports.register = (req, res) => {
     console.log(req.body);
     
