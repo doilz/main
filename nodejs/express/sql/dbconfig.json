@@ -2,6 +2,6 @@
     "host" : "localhost",
     "user" : "root",
     "password": "wlehdlf1",
-    "database": "nodejs",
-    "connectionLimit" : 20
+    "database": "nodepot",
+    "connectionLimit" : 100
 }
