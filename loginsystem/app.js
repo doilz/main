@@ -1,11 +1,22 @@
 //익스프레스 서버
 const express = require("express");
-const path = require("path");
 const app = express();
+
+//루트디렉토리 설정
+const path = require("path");
+
+//db
 const mysql = require("mysql");
+
+//서버 설정
 const port = 3001;
+
+//민감한 서버 설정
 const dotenv = require("dotenv");
+
+
 const exp = require("constants");
+const cookieParser = require("cookie-parser");
 dotenv.config({ path: './.env'});
 
 
@@ -19,6 +30,21 @@ const db = mysql.createConnection({
 });
 
 
+
+
+// 퍼블릭 디렉토리 설정
+const publicDirectory = path.join(__dirname, './public')  
+app.use(express.static(publicDirectory));                 
+
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(cookieParser());
+// 뷰엔진 설정
+app.set('view engine', 'hbs');                           
+
+
+
+
 // 디비 커넥트
 db.connect((err) => {                           
     if(err) throw err;
@@ -27,28 +53,14 @@ db.connect((err) => {
 });
 
 
-// 퍼블릭 디렉토리 설정
-const publicDirectory = path.join(__dirname, './public')  
-app.use(express.static(publicDirectory));                 
 
-// 뷰엔진 설정
-app.set('view engine', 'hbs');                           
+// define routes 요청처리 by router  pages.js모듈을 사용한다.
+app.use('/', require('./routes/pages'));
 
+// /auth에 요청이 들어오면 /routes/auth를 실행한다.
+app.use('/auth', require('./routes/auth'));
+// 쿠키파서
 
-
-
-
-// 요청처리
-
-app.get("/", (req, res) => {    //언제든 / 에 도달하면 (req, res)이 펑션을 실행하겠다. 요청, 응답
-    // res.send("<h1>Home page</h1>");
-    res.render("index");
-
-});
-
-app.get("/register", (req, res) => {
-    res.render("register")
-});
 
 
 // 리슨
