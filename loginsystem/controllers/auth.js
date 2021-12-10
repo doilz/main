@@ -1,7 +1,7 @@
 const mysql = require("mysql");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
-const cookieParser = require("cookie-parser");
+const { promisify } = require('util');
 
 const db = mysql.createConnection({
     host: process.env.HOST,
@@ -30,8 +30,8 @@ exports.login = (req, res) => {
                     
                 });
             } else {
-                const id = results[0].id
-                const token = jwt.sign({id: id}, process.env.JWT_SECRET, {
+                const userid = results[0].userid
+                const token = jwt.sign({userid: userid}, process.env.JWT_SECRET, {
                     expiresIn: process.env.JWT_EXPIRES_IN
                 });
                 console.log('The token is: ' + token);
@@ -88,3 +88,49 @@ exports.register = (req, res) => {
 
         
 };
+
+
+
+exports.isLoggedIn = async (req, res, next) => {
+    // console.log(req.cookies);
+    if( req.cookies.jwt) {
+      try {
+        //1) verify the token
+        const decoded = await promisify(jwt.verify)(req.cookies.jwt,
+        process.env.JWT_SECRET
+        );
+  
+        console.log(decoded);
+  
+        //2) Check if the user still exists
+        db.query('SELECT * FROM users WHERE userid = ?', [decoded.userid], (error, result) => {
+          console.log(result);
+  
+          if(!result) {
+            return next();
+          }
+          
+          req.user = result[0];
+          console.log("user is")
+          console.log(req.user);
+          return next();
+  
+        });
+      } catch (error) {
+        console.log(error);
+        return next();
+      }
+    } else {
+      next();
+    }
+  }
+
+
+  exports.logout = async (req, res) => {
+      res.cookie('jwt', 'logout', {
+          expires: new Date(Date.now()+ 2*1000),   // 2 * 1000 밀리세컨드
+          httpOnly: true
+      });
+
+      res.status(200).redirect('/');
+  }

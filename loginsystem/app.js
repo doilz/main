@@ -38,6 +38,7 @@ app.use(express.static(publicDirectory));
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+
 app.use(cookieParser());
 // 뷰엔진 설정
 app.set('view engine', 'hbs');                           
@@ -59,9 +60,6 @@ app.use('/', require('./routes/pages'));
 
 // /auth에 요청이 들어오면 /routes/auth를 실행한다.
 app.use('/auth', require('./routes/auth'));
-// 쿠키파서
-
-
 
 // 리슨
 app.listen(port, () => {
