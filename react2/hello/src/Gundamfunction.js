@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-function Gundams() {
-    const props = {   //속성내장
+function Gundamfunction() {
+    const props = {  
         camp: "Earth",
         model: "X10A",
         engine: "Atomic",
@@ -23,4 +23,4 @@ function Gundams() {
 
 
 
-export default Gundams;
+export default Gundamfunction;

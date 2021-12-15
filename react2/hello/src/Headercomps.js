@@ -35,11 +35,6 @@ export const Headercompfunction = () => {
     });
 
     useEffect(()=>{
-        
-    });
-
-    
-    useEffect(()=>{
         getSnapshotBeforeUpdate();
     });
 

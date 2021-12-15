@@ -2,19 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Gundams from './Gundams';
+import Gundamfunction from './Gundamfunction';
 import reportWebVitals from './reportWebVitals';
 import Archangel from './Archangel';
 import Headercomps from './Headercomps';
-import Container from './Container';
 import Carfunction from './Carfunction'
 import Gundam from './Gundam';
+import Containerfunction from './Containerfunction';
 
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <Headercomps/>
+    <Containerfunction/>
   </React.StrictMode>,
   document.getElementById('header')
 );
