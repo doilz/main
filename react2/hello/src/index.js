@@ -2,18 +2,24 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Gundam from './Gundam';
+import Gundams from './Gundams';
 import reportWebVitals from './reportWebVitals';
 import Archangel from './Archangel';
-import Headercomp from './Headercomp';
+import Headercomps from './Headercomps';
+import Container from './Container';
+import Carwork from './Carwork'
+import Gundam from './Gundam';
+
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <Headercomp newTitle="New title!!"/>
+    <Headercomps/>
   </React.StrictMode>,
   document.getElementById('header')
 );
+
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

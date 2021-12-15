@@ -3,9 +3,7 @@ import React from "react";
 
 class Gundam extends React.Component {
     constructor(props) {
-        const { color } = props;
-        super(props);    //아규먼트
-
+        super()    //아규먼트
         this.state = {   //속성내장
             camp: "Earth",
             model: "X10A",

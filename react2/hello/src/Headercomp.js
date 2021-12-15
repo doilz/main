@@ -33,10 +33,10 @@ class Headercomp extends React.Component {
         }, 2000);
     }  
 
-    getSnapshotBeforeUpdate(prevProps, prevState) {
-        document.getElementById("div1").innerHTML = 
-        "Before Update title is " + prevState.headertitle + ", Before Update newtitle is " + prevProps.newTitle;
-    }
+    // getSnapshotBeforeUpdate(prevProps, prevState) {
+    //     document.getElementById("div1").innerHTML = 
+    //     "Before Update title is " + prevState.headertitle + ", Before Update newtitle is " + prevProps.newTitle;
+    // }
     
     componentDidUpdate() {
         document.getElementById("div2").innerHTML =
