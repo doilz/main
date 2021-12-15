@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
-function Carwork(props) {
+function Carfunction(props) {
     const [color] = useState("red");
 
     return <h1>This is {props.color} car!!!</h1>;
 }
 
-export default Carwork;
+export default Carfunction;

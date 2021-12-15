@@ -8,7 +8,7 @@ export function usePrevTitle(state) {
         return ref.current; 
     }
 
-export const Headercompfunction = () => {
+export const Headercomps = () => {
     const [headerTitle, setHeaderTitle] = useState("This is Header Title ! ! !");
     const prevTitle = usePrevTitle(headerTitle);
     console.log(prevTitle);
@@ -57,4 +57,4 @@ export const Headercompfunction = () => {
     </div>);
 };
 
-export default Headercompfunction;
+export default Headercomps;
