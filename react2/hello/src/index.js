@@ -8,13 +8,14 @@ import Archangel from './Archangel';
 import Headercomps from './Headercomps';
 import Carfunction from './Carfunction'
 import Gundam from './Gundam';
-import Containerfunction from './Containerfunction';
+import Containerfunctions from './Containerfunctions';
+import Headercomp from './Headercomp';
 
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <Containerfunction/>
+    <Headercomp/>
   </React.StrictMode>,
   document.getElementById('header')
 );

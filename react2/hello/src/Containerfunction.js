@@ -1,27 +1,31 @@
 import React, { useEffect, useState } from "react";
 
 const Containerfunction = (props) => {
-    const [state, setState] = useState(true);
-    const delHandler = () => setState(false); 
+    const [show, setShow] = useState(true);
+    const delHandler = () => setShow(false); 
+    const componentUnmount = () => {
+        useEffect(()=>{
+           return() => alert("the component named Header is about to be unmounted.")
+        });
+    };
+    
     console.log(state);
     
     let myHeader; 
-        if(state) {
+        if(show) {
             myHeader = <Child />;
         }
-        return (
-            <div>
+        else {
+            return(<div>
                 {myHeader}
                 <button type="button" onClick={delHandler()}>delete hander</button>
-            </div>
-        );
+            </div>)
+        };
     }
+ 
+      
 
     const Child = () => {
-       useEffect(()=>{
-        alert("the component named Header is about to be unmounted.")
-      
-     
        return (<h1>Hello World! ! ! ! !</h1>);  
     };
     

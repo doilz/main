@@ -1,5 +1,6 @@
+import React, { useEffect, useState } from "react";
 
-function Container(props) {
+function Containerfunctions(props) {
     let [show, setShow] = useState(true)
 
 
@@ -55,4 +56,4 @@ function Container(props) {
     )
 }
 
-export { Car, Garage, Gundam, Headercomp, Container };
+export default Containerfunctions ;
