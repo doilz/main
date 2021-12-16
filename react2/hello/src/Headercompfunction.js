@@ -29,15 +29,9 @@ export const Headercomps = () => {
         "The update title is " + headerTitle 
     };
 
-
     useEffect(()=>{
         componentDidMount();
     });
-
-    useEffect(()=>{
-        
-    });
-
     
     useEffect(()=>{
         getSnapshotBeforeUpdate();
@@ -47,7 +41,6 @@ export const Headercomps = () => {
         componenetDidUpdate();
     });
 
-           
     return (
         <div>
         <h1>{headerTitle}</h1>
