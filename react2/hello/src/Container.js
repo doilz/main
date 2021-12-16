@@ -11,16 +11,20 @@ class Container extends React.Component {
     }
 
     render() {
+        
         let myheader;
+        
         if(this.state.show) {
             myheader = <Child />;
         }
+        
         return (
             <div>
                 {myheader}
                 <button type="button" onClick={this.delHandler}>delete hander</button>
             </div>
         );
+        
     }
 }
 
