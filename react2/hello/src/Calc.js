@@ -12,34 +12,32 @@ function Calc() {
 
 
     const add = event => {
-        event.preventDefault();
         setResultNumber(parseInt(targetNumber) + parseInt(modNumber));
     }
 
     const sub = event => {
-        event.preventDefault();
         setResultNumber(parseInt(targetNumber) - parseInt(modNumber));
     }
 
     const multi = event => {
-        event.preventDefault();
         setResultNumber(parseInt(targetNumber) * parseInt(modNumber));
     }
 
     const division = event => {
-        event.preventDefault();
         setResultNumber(parseInt(targetNumber) / parseInt(modNumber));
     }
 
-
     const addString = event => {
-        event.preventDefault();
         setResultTextAdd(targetNumber + modNumber);
+    }
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
     }
 
     return (
         <>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <h1>{resultNumber}</h1>
                 <label> Enter Calc Number :
                     <input type="number"
@@ -53,12 +51,12 @@ function Calc() {
                         value={input.modNumber}
                         onChange={(e) => setModNumber(e.target.value)} />
                 </label>
-                <button type="submit" id="add" onClick={(event) => add(event)}>add</button>
-                <button type="submit" id="sub" onClick={(event) => sub(event)}>sub</button>
-                <button type="submit" id="multi" onClick={(event) => multi(event)}>multi</button>
-                <button type="submit" id="division" onClick={(event) => division(event)}>division</button>
+                <button type="submit" id="add" onClick={add}>add</button>
+                <button type="submit" id="sub" onClick={sub}>sub</button>
+                <button type="submit" id="multi" onClick={multi}>multi</button>
+                <button type="submit" id="division" onClick={division}>division</button>
             </form>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <h1>{resultTextAdd}</h1>
                 <label>Enter your string :
                     <input type="text"
@@ -71,7 +69,7 @@ function Calc() {
                         value={inputText.modNumber}
                         onChange={(e) => setModNumber(e.target.value)} />
                 </label>
-                <button type="submit" id="add" onClick={(event) => addString(event)}>addString</button>
+                <button type="submit" id="add" onClick={addString}>addString</button>
             </form>
         </>
     )
