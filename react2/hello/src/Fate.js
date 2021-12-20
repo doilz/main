@@ -1,4 +1,4 @@
-function Fate(props){
+function Fate(props) {
     const characters = props.characters;
 
     return (
@@ -13,5 +13,4 @@ function Fate(props){
         </>
     );
 }
-
 export default Fate;

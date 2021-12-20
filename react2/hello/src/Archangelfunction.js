@@ -20,9 +20,9 @@ function Archangelfunction() {
         );        
     }
 
-function Secondgundam(props) {
-    return <h2>This is {props.model} ! ! !</h2>
-}
+// function Secondgundam(props) {
+//     return <h2>This is {props.model} ! ! !</h2>
+// }
 
 // function Archangelfunction() {
 //     const gundamInfo = {    
