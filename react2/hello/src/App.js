@@ -1,8 +1,20 @@
 import logo from './logo.svg';
+<<<<<<< HEAD
 import './App.css';
+=======
+import Jsxtest from './Jsxtest';
+>>>>>>> 0c2e4955b0b345f2360daeda614d2840fd947d17
 import Wow from './Wow';
 import Counter from './Counter';
 import Calc from './Calc';
+import Jsxcss from './Jsxcss';
+import Block from './Block';
+// import Blockcomponent from './Blockcomponent';
+import React from 'react';
+import Radio from './Radio';
+import Footballclass from './Footballclass';
+import Routerwork from './Routerwork';
+
 
 // function App() {
 //   return (
@@ -24,12 +36,18 @@ import Calc from './Calc';
 //     </div>
 //   );
 // }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0c2e4955b0b345f2360daeda614d2840fd947d17
 
 function App() {
   return (
+    <React.StrictMode>
     <div>
-      <Calc />
+      <Routerwork />
     </div>
+    </React.StrictMode>
   );
 }
 
