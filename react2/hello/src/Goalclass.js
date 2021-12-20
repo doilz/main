@@ -18,8 +18,7 @@ export class Goalclass extends React.Component {
     }
 
     render() {
-        const { goalstate } = this.state;
-        let theResult;
+      
 
     return (
         <>
