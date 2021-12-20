@@ -40,4 +40,4 @@ function Archangelfunction() {
 //         );        
 //     }
 
-export default Archangelfunction;
+// export default Archangelfunction;
