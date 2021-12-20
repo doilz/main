@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import Car from './Car';
-import Gundam from './Gundam';
+// import './index.css';
+// import App from './App';
+// import Car from './Car';
+// import Gundam from './Gundam';
 import reportWebVitals from './reportWebVitals';
+import Functionmaster from './Functionmaster';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Gundam model="Freedum" />
+    <Functionmaster />
   </React.StrictMode>,
   document.getElementById('root')
 );

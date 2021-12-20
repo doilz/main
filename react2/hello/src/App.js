@@ -1,8 +1,5 @@
 import logo from './logo.svg';
 import './App.css';
-<<<<<<< HEAD
-import Jsxtest from './jsxtest';
-=======
 import Wow from './Wow';
 import Counter from './Counter';
 import Calc from './Calc';
@@ -27,7 +24,6 @@ import Calc from './Calc';
 //     </div>
 //   );
 // }
->>>>>>> 0109342c541649311b540f2dd74a97434f2738bd
 
 function App() {
   return (
