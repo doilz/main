@@ -1,28 +1,52 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
-function Functionmaster (props) {
-    const resultState = props.buttonState;
+function Functionmaster () {
+    const [result, setResult] = useState(true);
+    const [resultText, setResultText] = useState("This is Result A");
 
-    function PrintA() {
-        return <h1>This is PrintA result</h1>
+    const resultTextA = () => {
+        setResultText("This is Result A")
+    }
+    
+    const resultTextB = () => {
+        setResultText("This is Result B")
     }
 
-    function PrintB() {
-        return <h1>This is PrintB result</h1>
+    const resultA = () => {
+        setResult(false);
+        resultTextA()        
     }
 
-    function ButtonA() {
-        return <input type="button" onClick={buttonState(false)}>ResultA</input>
+    const resultB = () => {
+        setResult(true);
+        resultTextB()
     }
 
-    function ButtonB() {
-        return <input type="button" onClick={buttonState(true)}>ResultB</input>
+    function PrintA(event) {
+        return (
+                <div>
+                    {resultText}    
+                    <button type="button" onClick={resultA}>Result A</button> 
+                </div>
+               )
     }
 
-    return(
+    function PrintB(event) {
+        return (
+            <div>
+                {resultText}
+                <button type="button" onClick={resultB}>Result B</button>
+            </div>
+        )
+        
+    }
+
+
+ 
+
+    return (
         <>
-        {buttonState ? <PrintA /> : <PrintB />}
-        {buttonState ? <ButtonA /> : <ButtonB />}
+         {result ? <PrintA /> : <PrintB />}
         </>
     )
 

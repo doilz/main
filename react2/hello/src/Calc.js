@@ -2,33 +2,44 @@ import React, { useState } from "react";
 
 function Calc() {
 
-    const [input, setInput] = useState({});
-    const [targetNumber, setTargetNumber] = useState();
-    const [modNumber, setModNumber] = useState();
+    const [number, setNumber] = useState({
+        targetNumber: '',
+        modNumber: ''
+    });
+    const [inputText, setInputText] = useState({  
+        firstText: "",
+        secondText: ''
+    });
+   
+    const onChange = (event) => {
+        setNumber(values => ({...values, [event.target.name]: event.target.value}));
+        setInputText(values => ({...values, [event.target.name]: event.target.value}));
+      }
+
     const [resultNumber, setResultNumber] = useState("Calc result");
 
-    const [inputText, setInputText] = useState({});
+    
     const [resultTextAdd, setResultTextAdd] = useState("Text add Resut");
 
 
     const add = event => {
-        setResultNumber(parseInt(targetNumber) + parseInt(modNumber));
+        setResultNumber(parseInt(number.targetNumber) + parseInt(number.modNumber));
     }
 
     const sub = event => {
-        setResultNumber(parseInt(targetNumber) - parseInt(modNumber));
+        setResultNumber(parseInt(number.targetNumber) - parseInt(number.modNumber));
     }
 
     const multi = event => {
-        setResultNumber(parseInt(targetNumber) * parseInt(modNumber));
+        setResultNumber(parseInt(number.targetNumber) * parseInt(number.modNumber));
     }
 
     const division = event => {
-        setResultNumber(parseInt(targetNumber) / parseInt(modNumber));
+        setResultNumber(parseInt(number.targetNumber) / parseInt(number.modNumber));
     }
 
     const addString = event => {
-        setResultTextAdd(targetNumber + modNumber);
+        setResultTextAdd(inputText.firstText + inputText.secondText);
     }
 
     const handleSubmit = (event) => {
@@ -42,14 +53,14 @@ function Calc() {
                 <label> Enter Calc Number :
                     <input type="number"
                         name="targetNumber"
-                        value={input.targetNumber}
-                        onChange={(e) => setTargetNumber(e.target.value)} />
+                        value={number.targetNumber}
+                        onChange={onChange} />
                 </label>
                 <label>
                     <input type="number"
                         name="modNumber"
-                        value={input.modNumber}
-                        onChange={(e) => setModNumber(e.target.value)} />
+                        value={number.modNumber}
+                        onChange={onChange} />
                 </label>
                 <button type="submit" id="add" onClick={add}>add</button>
                 <button type="submit" id="sub" onClick={sub}>sub</button>
@@ -60,14 +71,14 @@ function Calc() {
                 <h1>{resultTextAdd}</h1>
                 <label>Enter your string :
                     <input type="text"
-                        name="targetNumber"
-                        value={inputText.targetNumber}
-                        onChange={(e) => setTargetNumber(e.target.value)} />
+                        name="firstText"
+                        value={inputText.firstText}
+                        onChange={onChange} />
 
                     <input type="text"
-                        name="modNumber"
-                        value={inputText.modNumber}
-                        onChange={(e) => setModNumber(e.target.value)} />
+                        name="secondText"
+                        value={inputText.secondText}
+                        onChange={onChange} />
                 </label>
                 <button type="submit" id="add" onClick={addString}>addString</button>
             </form>

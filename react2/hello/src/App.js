@@ -1,9 +1,6 @@
 import logo from './logo.svg';
-<<<<<<< HEAD
 import './App.css';
-=======
 import Jsxtest from './Jsxtest';
->>>>>>> 0c2e4955b0b345f2360daeda614d2840fd947d17
 import Wow from './Wow';
 import Counter from './Counter';
 import Calc from './Calc';
@@ -36,11 +33,6 @@ import Routerwork from './Routerwork';
 //     </div>
 //   );
 // }
-<<<<<<< HEAD
-=======
-
->>>>>>> 0c2e4955b0b345f2360daeda614d2840fd947d17
-
 function App() {
   return (
     <React.StrictMode>

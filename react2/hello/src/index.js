@@ -19,13 +19,14 @@ import GoalclassCopy from './GoalclassCopy';
 import Archangellistclass from './Archangellistclass';
 import Fateclass from './Fateclass'
 import Footballclass from './Footballclass';
+import Calc from './Calc';
 
 const characters = ['Siro', 'Saber', 'Archer', 'Tosaka Lyn'];
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Calc />
   </React.StrictMode>,
   document.getElementById('root')
 );
