@@ -9,7 +9,7 @@ export default function InputExam() {
     const nameInput = useRef();
     const { name, nickname } = inputs;    //비구조화 할당을 통해 값 추출
 
-    const onChange = (event) => {
+    const changeHandler = (event) => {
         const { value, name } = event.target;    //e.target 에서 name과 value를 추출
 
         setInputs({
@@ -18,13 +18,34 @@ export default function InputExam() {
         });
     };
 
-    const  onReset = () => {
+    const  resetHandler = () => {
         setInputs({
             name: '',
             nickname: ''
         })
-        nameInputnput.current.forcus();  //초기화 해주고 포커싱
+        nameInput.current.focus();  //초기화 해주고 포커싱
     }
 
-
+    return (
+        <div>
+            <input 
+                name="name"
+                placeholder="input names"
+                onChange={changeHandler}
+                value={name} // 변수안에 밸류값을 넣겠다. 
+                ref={nameInput} 
+            />
+            <input 
+                name="nickname"
+                placeholder="nickname"
+                onChange={changeHandler}
+                value={nickname}      
+            />
+            <button onClick={resetHandler}>Reset</button>
+            <div>
+                <b>Value: </b>
+                {name} ({nickname})
+            </div>
+        </div>
+    );
 }

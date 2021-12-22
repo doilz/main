@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import InputExam from './InputExam'
+import Supercalc from './Supercalc';
+import UserList from './UserList';
 
 ReactDOM.render(
   <React.StrictMode>
